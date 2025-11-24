@@ -95,4 +95,61 @@ add_filter(
         return ' ...';
     }
 );
+
+/**
+ * Output dynamic meta descriptions for SEO friendliness.
+ */
+function rr_output_meta_description() {
+    if ( is_admin() ) {
+        return;
+    }
+
+    $description = '';
+
+    if ( is_singular() ) {
+        $excerpt = get_the_excerpt();
+        if ( $excerpt ) {
+            $description = $excerpt;
+        }
+    } elseif ( is_category() || is_tag() || is_tax() ) {
+        $description = term_description();
+    } elseif ( is_home() || is_front_page() ) {
+        $description = get_bloginfo( 'description' );
+    } elseif ( is_archive() ) {
+        $description = get_the_archive_description();
+    }
+
+    if ( ! $description ) {
+        $description = get_bloginfo( 'description' );
+    }
+
+    $description = trim( wp_strip_all_tags( $description ) );
+    if ( $description ) {
+        $description = wp_trim_words( $description, 32, '' );
+        printf(
+            "<meta name=\"description\" content=\"%s\" />\n",
+            esc_attr( $description )
+        );
+    }
+}
+add_action( 'wp_head', 'rr_output_meta_description', 1 );
+
+/**
+ * Google Analytics tag.
+ */
+function rr_output_google_analytics() {
+    if ( is_admin() ) {
+        return;
+    }
+    ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MN7REC56SR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MN7REC56SR');
+    </script>
+    <?php
+}
+add_action( 'wp_head', 'rr_output_google_analytics', 5 );
 ?>

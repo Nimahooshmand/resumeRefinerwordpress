@@ -19,10 +19,8 @@ get_header();
                 <li>Instant export as PDF, DOCX, or TXT</li>
                 <li>Guided prompt builder for niche roles</li>
             </ul>
-            <div class="rr-hero__actions">
-                <a class="rr-button" href="#refine-flow">Start free refinement</a>
-                <a class="rr-button rr-button--ghost" href="<?php echo esc_url( site_url( '/api' ) ); ?>">Explore API</a>
-            </div>
+            
+            <a class="rr-button" href="https://resume-refiner.onrender.com/" target="_blank" rel="noopener">Refine Now</a>
             <div class="rr-hero__meta">
                 <div>
                     <span>2.4M+</span>
@@ -36,25 +34,6 @@ get_header();
                     <span>&lt;90s</span>
                     <p>Average refinement time</p>
                 </div>
-            </div>
-        </div>
-        <div class="rr-hero__panel">
-            <div class="rr-upload-card" id="refine-flow">
-                <p class="eyebrow">Upload Resume</p>
-                <label class="rr-field">
-                    <span>Resume File</span>
-                    <input type="file" disabled placeholder="Upload DOCX or TXT" />
-                </label>
-                <label class="rr-field">
-                    <span>Job Description</span>
-                    <textarea placeholder="Paste role summary with must-have skills"></textarea>
-                </label>
-                <label class="rr-field">
-                    <span>Custom Prompt</span>
-                    <textarea placeholder="Give the AI a specific tone, style, or goal"></textarea>
-                </label>
-                <button class="rr-button rr-button--full" type="button">Preview optimized resume</button>
-                <p class="rr-note">We highlight the exact keywords and phrasing recruiters expect.</p>
             </div>
         </div>
     </div>
@@ -113,33 +92,6 @@ get_header();
         </ol>
     </div>
 </section>
-<section class="rr-section rr-section--split">
-    <div class="rr-container">
-        <div class="rr-split">
-            <div>
-                <p class="eyebrow">Developer friendly</p>
-                <h2>Leverage our open API.</h2>
-                <p>Trigger refinements via webhook, auto-detect job keywords, and enrich resumes with consistent phrasing.</p>
-                <ul class="rr-list">
-                    <li>Bulk upload support for recruiting teams</li>
-                    <li>Webhook notifications when AI passes success thresholds</li>
-                    <li>Granular logs showing which prompts were applied</li>
-                </ul>
-            </div>
-            <div class="rr-code-block">
-<pre><code>{
-  "endpoint": "/v1/refine",
-  "payload": {
-    "resume": "upload_id",
-    "job_description": "jd_id",
-    "prompt": "Highlight leadership impact",
-    "outputs": ["pdf", "docx", "txt"]
-  }
-}</code></pre>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="rr-section rr-section--downloads">
     <div class="rr-container">
         <div class="rr-section__header">
@@ -159,28 +111,6 @@ get_header();
                 <h3>TXT</h3>
                 <p>Plain-text versions for legacy portals and quick updates.</p>
             </article>
-        </div>
-    </div>
-</section>
-<section class="rr-section rr-section--prompt">
-    <div class="rr-container">
-        <div class="rr-split">
-            <div>
-                <p class="eyebrow">Custom instructions</p>
-                <h2>Guide the AI with a bespoke prompt.</h2>
-                <p>Describe the exact voice, achievements, or format you want. The system will blend your prompt with the job description for unmatched personalization.</p>
-            </div>
-            <form class="rr-form rr-form--prompt">
-                <label>
-                    <span>Prompt goal</span>
-                    <input type="text" placeholder="Highlight cross-functional leadership" />
-                </label>
-                <label>
-                    <span>Key accomplishments</span>
-                    <textarea placeholder="Led CRM migration, increased retention 18%"></textarea>
-                </label>
-                <button class="rr-button" type="button">Generate Sample</button>
-            </form>
         </div>
     </div>
 </section>
@@ -210,7 +140,7 @@ get_header();
                                 <p class="eyebrow"><?php echo esc_html( get_the_date() ); ?></p>
                                 <h3><?php the_title(); ?></h3>
                                 <p><?php echo esc_html( rr_theme_excerpt( 22 ) ); ?></p>
-                                <span class="rr-link">Read story ?</span>
+                                <span class="rr-link">Read story &rarr;</span>
                             </div>
                         </a>
                     </article>

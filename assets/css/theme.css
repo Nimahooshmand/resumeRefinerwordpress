@@ -415,6 +415,12 @@
     }
 }
 
+.rr-footer-contact {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 .rr-page-hero {
     background: #f1f5f9;
     padding: 4rem 0 2rem;

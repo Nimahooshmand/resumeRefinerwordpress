@@ -36,7 +36,6 @@
             );
             ?>
         </nav>
-        <a href="#get-started" class="rr-button rr-button--ghost">Start Refining</a>
         <button class="rr-nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
             <span></span>
             <span></span>
@@ -52,7 +51,6 @@
             )
         );
         ?>
-        <a href="#get-started" class="rr-button rr-button--ghost">Start Refining</a>
     </div>
 </header>
 <main id="primary" class="rr-main">
