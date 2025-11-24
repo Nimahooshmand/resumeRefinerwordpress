@@ -1,0 +1,31 @@
+/*
+Theme Name: Resume Refiner
+Theme URI: https://example.com/resume-refiner
+Author: Codex Automation
+Author URI: https://example.com
+Description: Premium marketing site theme for showcasing AI resume refinement with landing, marketing, and editorial templates.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: resume-refiner
+Tags: custom-colors, custom-logo, custom-menu, featured-images, flexible-header, full-site-editing, responsive-layout
+*/
+
+:root {
+    --rr-primary: #5a54ff;
+    --rr-primary-dark: #3027d9;
+    --rr-secondary: #00d4ff;
+    --rr-dark: #0f172a;
+    --rr-gray: #6b7280;
+    --rr-light: #f8fafc;
+    --rr-radius: 18px;
+    --rr-radius-pill: 999px;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    background-color: var(--rr-light);
+    color: var(--rr-dark);
+}
+
+@import url('assets/css/theme.css');
