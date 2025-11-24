@@ -87,6 +87,16 @@
     width: 100%;
 }
 
+.rr-button--xl {
+    padding: 1.1rem 2.25rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto;
+    width: max-content;
+}
+
 .rr-hero {
     background: radial-gradient(circle at top right, rgba(0, 212, 255, 0.15), transparent 45%),
         radial-gradient(circle at 20% 20%, rgba(90, 84, 255, 0.2), transparent 45%),
@@ -415,7 +425,10 @@
     }
 }
 
-.rr-footer-contact {
+.rr-footer-contact,
+.rr-footer-contact:visited,
+.rr-footer-contact:hover,
+.rr-footer-contact:focus {
     color: #fff;
     text-decoration: none;
     font-weight: 600;

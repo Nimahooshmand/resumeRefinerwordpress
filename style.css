@@ -28,4 +28,4 @@ body {
     color: var(--rr-dark);
 }
 
-@import url('assets/css/theme.css');
+@import url('theme.css');
