@@ -28,7 +28,7 @@ get_header();
                         <p class="eyebrow"><?php echo esc_html( get_the_date() ); ?></p>
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <p><?php echo esc_html( rr_theme_excerpt( 32 ) ); ?></p>
-                        <a class="rr-link" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Continue reading', 'resume-refiner' ); ?> ?</a>
+                        <a class="rr-link" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Continue reading', 'resume-refiner' ); ?> &rarr;</a>
                     </div>
                 </article>
             <?php endwhile; ?>

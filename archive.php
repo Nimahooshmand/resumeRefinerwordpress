@@ -22,7 +22,7 @@ get_header();
                 <article <?php post_class( 'rr-article-card' ); ?>>
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <p><?php echo esc_html( rr_theme_excerpt( 28 ) ); ?></p>
-                    <a class="rr-link" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read more', 'resume-refiner' ); ?> ?</a>
+                    <a class="rr-link" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read more', 'resume-refiner' ); ?> &rarr;</a>
                 </article>
             <?php endwhile; ?>
             <div class="rr-pagination">

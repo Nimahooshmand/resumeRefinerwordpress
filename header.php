@@ -36,12 +36,13 @@
             );
             ?>
         </nav>
-        <button class="rr-nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+        <button class="rr-nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle="true">
+            <span></span>
             <span></span>
             <span></span>
         </button>
     </div>
-    <div class="rr-mobile-menu" id="mobile-menu">
+    <div class="rr-mobile-menu" id="mobile-menu" aria-hidden="true">
         <?php
         wp_nav_menu(
             array(
