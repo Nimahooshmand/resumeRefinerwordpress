@@ -43,11 +43,20 @@ add_action( 'after_setup_theme', 'rr_theme_setup' );
  * Enqueue scripts and styles.
  */
 function rr_theme_assets() {
-    wp_enqueue_style( 'resume-refiner-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap', array(), RR_THEME_VERSION );
-    wp_enqueue_style( 'resume-refiner-style', get_stylesheet_uri(), array( 'resume-refiner-fonts' ), RR_THEME_VERSION );
-    wp_enqueue_style( 'resume-refiner-theme', get_template_directory_uri() . '/theme.css', array( 'resume-refiner-style' ), RR_THEME_VERSION );
+    $theme_dir  = get_template_directory();
+    $style_path = get_stylesheet_directory() . '/style.css';
+    $theme_css  = $theme_dir . '/theme.css';
+    $theme_js   = $theme_dir . '/theme.js';
 
-    wp_enqueue_script( 'resume-refiner-theme', get_template_directory_uri() . '/theme.js', array(), RR_THEME_VERSION, true );
+    $style_ver    = file_exists( $style_path ) ? filemtime( $style_path ) : RR_THEME_VERSION;
+    $theme_css_ver = file_exists( $theme_css ) ? filemtime( $theme_css ) : RR_THEME_VERSION;
+    $theme_js_ver  = file_exists( $theme_js ) ? filemtime( $theme_js ) : RR_THEME_VERSION;
+
+    wp_enqueue_style( 'resume-refiner-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap', array(), null );
+    wp_enqueue_style( 'resume-refiner-style', get_stylesheet_uri(), array( 'resume-refiner-fonts' ), $style_ver );
+    wp_enqueue_style( 'resume-refiner-theme', get_template_directory_uri() . '/theme.css', array( 'resume-refiner-style' ), $theme_css_ver );
+
+    wp_enqueue_script( 'resume-refiner-theme', get_template_directory_uri() . '/theme.js', array(), $theme_js_ver, true );
 }
 add_action( 'wp_enqueue_scripts', 'rr_theme_assets' );
 

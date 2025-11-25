@@ -20,7 +20,7 @@ get_header();
                 <li>Guided prompt builder for niche roles</li>
             </ul>
             
-            <a class="rr-button rr-button--xl" href="https://resume-refiner.onrender.com/" target="_blank" rel="noopener">Refine Now</a>
+            <a class="rr-button rr-button--xl" href="https://app.resumerefiner.online/" target="_blank" rel="noopener">Refine Now</a>
             <div class="rr-hero__meta">
                 <div>
                     <span>2.4M+</span>

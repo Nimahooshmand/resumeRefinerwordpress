@@ -36,6 +36,7 @@
             );
             ?>
         </nav>
+        <a class="rr-login-link" href="https://app.resumerefiner.online/" target="_blank" rel="noopener">Login</a>
         <button class="rr-nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle="true">
             <span></span>
             <span></span>
@@ -52,6 +53,7 @@
             )
         );
         ?>
+        <a class="rr-login-link rr-login-link--mobile" href="https://app.resumerefiner.online/" target="_blank" rel="noopener">Login</a>
     </div>
 </header>
 <main id="primary" class="rr-main">
